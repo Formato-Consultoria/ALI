@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import Layout from '@/components/layout'
+import { PBI } from "@/content/iframes"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,9 +14,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      
-      <Layout className="w-full h-screen">
-        
+      {/* auto */}
+      <Layout className={`w-full h-screen ${inter.className}`}>
       </Layout>
     </>
   )
