@@ -39,10 +39,14 @@ export default function NavBar() {
     }
 
     return (
-        <header className={"w-full h-14 bg-purple-900 px-10 flex justify-between"}>
-            <h5
-                className={""}
-            >Relatorio ALI Produtividade e Transformação digital</h5>
+        <header className={"w-full h-14 bg-[#1155cc] px-10 flex justify-between items-center"}>
+            <Image
+                src="/image/ali_logotipo.png"
+                height={50}
+                width={50}
+                alt="logotipo"
+                className="object-contain sm:ml-10"
+            />
 
             <nav className={"w-auto h-auto flex justify-between items-center my-auto"}>
                 <ul className={"hidden lg:flex gap-3"}>

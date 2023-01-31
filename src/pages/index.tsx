@@ -3,6 +3,8 @@ import { Inter } from '@next/font/google'
 import Layout from '@/components/layout'
 import { PBI } from "@/content/iframes"
 
+import BannerLink from '@/components/banner'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -14,8 +16,26 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      {/* auto */}
-      <Layout className={`w-full h-screen ${inter.className}`}>
+      
+      <Layout className={`w-full h-screen flex flex-col items-center justify-center gap-2 bg-blue-100 ${inter.className}`}>
+        <h5
+          className={"text-black text-2xl h-10 my-2.5 text-center"}
+        >
+          Relatório Agentes Locais de Inovação
+        </h5>
+
+        <div className={"w-full h-full flex items-center justify-center flex-wrap flex-col sm:flex-nowrap sm:flex-row gap-2.5 bg-blue-100 relative"}>
+          <BannerLink
+            href="#"
+            src={"/image/ali-td.png"}
+            className={"w-6/12 h-96"}
+          />
+          <BannerLink
+            href="#"
+            src={"https://lh6.googleusercontent.com/WNJ9ISQLmaQb9-IiadoX_J9s_gzsKyWDeGrR281wR8WihzlgfAKmSDrWOV9OeWpVWQD405XAlSw7hp9pOBrij8s=w16383"}
+            className={"w-6/12 h-96"}
+          />
+        </div>
       </Layout>
     </>
   )

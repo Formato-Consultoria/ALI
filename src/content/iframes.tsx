@@ -13,7 +13,7 @@ import { IframeProps } from "@/@Types/iframes";
  */
 
 const height = "530px";
-const width = "1138px";
+const width = "1000px";
 
 export const PBI: IframeProps[] = [
     {
