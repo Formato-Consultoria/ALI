@@ -3,26 +3,16 @@ import Layout from '@/components/layout'
 import { PBI } from '@/content/iframes'
 import { useRouter } from 'next/router'
 
-import { changeNameFormat } from '@/utils/change-name-format'
-
-import Link from 'next/link'
-import { ArrowBendUpLeft } from 'phosphor-react'
+import { convertStringToSlug } from '@/utils/change-name-format'
 
 export default function Report() {
     const router = useRouter();
     const { report } = router.query;
 
-    const rp: IframeProps | undefined = PBI.find((rp) => changeNameFormat(rp.name) === report);
+    const rp: IframeProps | undefined = PBI.find(({ name }) => convertStringToSlug(name) === report);
 
     return (
         <Layout className="w-full h-auto">
-          <Link
-            href="/"
-            className={"top-0 -left-20 z-50 absolute h-max w-max px-1.5 rounded-full bg-zinc-700 brightness-90 hover:brightness-1"}
-          >
-            <ArrowBendUpLeft size={30} color="rgb(212 212 216)" weight="fill" />
-          </Link>
-
           {rp?.iframe}
         </Layout>
     )

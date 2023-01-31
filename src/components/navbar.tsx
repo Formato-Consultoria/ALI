@@ -3,7 +3,7 @@ import { PBI } from '@/content/iframes';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ReactElement, useEffect, useState } from 'react';
-import { changeNameFormat } from '@/utils/change-name-format';
+import { convertStringToSlug } from '@/utils/change-name-format';
 import Modal from './modal';
 import { ArrowBendUpLeft, List, X } from 'phosphor-react';
 import { useRouter } from 'next/router';
@@ -19,7 +19,7 @@ export default function NavBar() {
             key={`${name}-${index}`}
             className={"text-lg font-medium h-full w-max px-3 text-white"}
         >
-            <Link href={`/${changeNameFormat(name)}`}>
+            <Link href={`/${convertStringToSlug(name)}`}>
                 {name}
             </Link>
         </li>
@@ -47,7 +47,7 @@ export default function NavBar() {
                 href="/"
                 className={`${router.pathname === "/" && "hidden"} h-max w-max px-1.5 rounded-full bg-zinc-700 brightness-90 hover:brightness-1 duration-500 ease-out`}
             >
-                <ArrowBendUpLeft size={30} color="rgb(212 212 216)" weight="fill" />
+                <ArrowBendUpLeft size={25} color="rgb(212 212 216)" weight="fill" />
             </Link>
 
             <Image
@@ -55,7 +55,7 @@ export default function NavBar() {
                 height={50}
                 width={50}
                 alt="logotipo"
-                className="hidden object-contain sm:flex"
+                className="object-contain sm:flex"
             />
 
             <nav className={"w-auto h-auto flex justify-between items-center my-auto sm:self-end"}>

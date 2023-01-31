@@ -1,6 +1,6 @@
 import { IframeProps } from "@/@Types/iframes";
 import { PBI } from "@/content/iframes";
-import { changeNameFormat } from "@/utils/change-name-format";
+import { convertStringToSlug } from "@/utils/change-name-format";
 import { Dialog } from "@headlessui/react";
 import Link from "next/link";
 import { ReactElement, useEffect, useState } from "react";
@@ -21,7 +21,7 @@ export default function Modal({ isOpen, onOpen, onClose }: ModalProps) {
         >
             <Link
                 onClick={onClose}
-                href={`/${changeNameFormat(name)}`}
+                href={`/${convertStringToSlug(name)}`}
             >
                 {name}
             </Link>

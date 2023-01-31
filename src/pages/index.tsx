@@ -1,13 +1,19 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import Layout from '@/components/layout'
-import { PBI } from "@/content/iframes"
 
 import BannerLink from '@/components/banner'
+import { convertStringToSlug } from '@/utils/change-name-format'
+import { useEffect } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  useEffect(() => {
+    console.log(convertStringToSlug("Transformação Digital"))
+  }, [])
+
   return (
     <>
       <Head>
@@ -28,12 +34,13 @@ export default function Home() {
           <BannerLink
             href="#"
             src={"/image/ali-td.png"}
-            className={"w-6/12 h-96"}
+            classNameLink={"w-6/12 h-96"}
           />
           <BannerLink
-            href="#"
+            href="https://sites.google.com/view/alibrasilmaismg/p%C3%A1gina-inicial"
             src={"/image/ali-prod.jpg"}
-            className={"w-6/12 h-96 object-left"}
+            classNameLink={"w-6/12 h-96"}
+            classNameImg={"object-left"}
           />
         </div>
       </Layout>
