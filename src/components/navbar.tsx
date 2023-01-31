@@ -5,11 +5,14 @@ import Image from 'next/image';
 import { ReactElement, useEffect, useState } from 'react';
 import { changeNameFormat } from '@/utils/change-name-format';
 import Modal from './modal';
-import { List, X } from 'phosphor-react';
+import { ArrowBendUpLeft, List, X } from 'phosphor-react';
+import { useRouter } from 'next/router';
 
 export default function NavBar() {
     const [isOpenModal, setIsOpenModal] = useState(false);
     const [anchorCustommer, setAnchorCustommer] = useState<ReactElement[]>([]);
+
+    const router = useRouter();
 
     const arrAnchorCustommer = PBI.map(({ name }: IframeProps, index) => (
         <li
@@ -40,15 +43,22 @@ export default function NavBar() {
 
     return (
         <header className={"w-full h-14 bg-[#1155cc] px-10 flex justify-between items-center"}>
+            <Link
+                href="/"
+                className={`${router.pathname === "/" && "hidden"} h-max w-max px-1.5 rounded-full bg-zinc-700 brightness-90 hover:brightness-1 duration-500 ease-out`}
+            >
+                <ArrowBendUpLeft size={30} color="rgb(212 212 216)" weight="fill" />
+            </Link>
+
             <Image
                 src="/image/ali_logotipo.png"
                 height={50}
                 width={50}
                 alt="logotipo"
-                className="object-contain sm:ml-10"
+                className="hidden object-contain sm:flex"
             />
 
-            <nav className={"w-auto h-auto flex justify-between items-center my-auto"}>
+            <nav className={"w-auto h-auto flex justify-between items-center my-auto sm:self-end"}>
                 <ul className={"hidden lg:flex gap-3"}>
                     {anchorCustommer}
                 </ul>

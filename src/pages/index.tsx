@@ -33,7 +33,7 @@ export default function Home() {
           <BannerLink
             href="#"
             src={"/image/ali-prod.jpg"}
-            className={"w-6/12 h-96"}
+            className={"w-6/12 h-96 object-left"}
           />
         </div>
       </Layout>
