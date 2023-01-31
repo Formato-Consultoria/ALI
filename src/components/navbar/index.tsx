@@ -3,28 +3,24 @@ import { PBI } from '@/content/iframes';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ReactElement, useEffect, useState } from 'react';
+import { changeNameFormat } from '@/utils/change-name-format';
 
 export default function NavBar() {
-    const [names, setNames] = useState<string[]>([]);
     const [anchorCustommer, setAnchorCustommer] = useState<ReactElement[]>([]);
 
-    useEffect(() => {
-        setNames(
-            PBI.map((iframe: IframeProps) => iframe.name)
-        )
+    const arrAnchorCustommer = PBI.map(({ name }: IframeProps) => (
+        <Link
+            href={`/${changeNameFormat(name)}`}
+            className={"text-ml font-medium h-8 w-max px-3 rounded bg-purple-900 text-white ring-1 ring-white"}
+        >
+            <li>
+                {name}
+            </li>
+        </Link>
+    ));
 
-        setAnchorCustommer(
-            names.map((link: string) => (
-                <Link
-                href={`/${link}`}
-                className={"text-ml font-medium h-8 w-max px-3 rounded bg-purple-900 text-white ring-1 ring-white"}
-                >
-                    <li>
-                        {link}
-                    </li>
-                </Link>
-            ))
-        )
+    useEffect(() => {
+        setAnchorCustommer(arrAnchorCustommer);
     }, [])
 
     return (
