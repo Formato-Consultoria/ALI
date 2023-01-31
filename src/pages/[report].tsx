@@ -18,9 +18,9 @@ export default function Report() {
         <Layout className="w-full h-auto">
           <Link
             href="/"
-            className={"top-0 -left-20 absolute"}
+            className={"top-0 -left-20 z-50 absolute h-max w-max px-1.5 rounded-full bg-zinc-700 brightness-90 hover:brightness-1"}
           >
-            <ArrowBendUpLeft size={30} color="#080c10" weight="fill" />
+            <ArrowBendUpLeft size={30} color="rgb(212 212 216)" weight="fill" />
           </Link>
 
           {rp?.iframe}

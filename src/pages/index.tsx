@@ -32,7 +32,7 @@ export default function Home() {
           />
           <BannerLink
             href="#"
-            src={"https://lh6.googleusercontent.com/WNJ9ISQLmaQb9-IiadoX_J9s_gzsKyWDeGrR281wR8WihzlgfAKmSDrWOV9OeWpVWQD405XAlSw7hp9pOBrij8s=w16383"}
+            src={"/image/ali-prod.jpg"}
             className={"w-6/12 h-96"}
           />
         </div>
