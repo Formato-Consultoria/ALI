@@ -3,17 +3,10 @@ import { Inter } from '@next/font/google'
 import Layout from '@/components/layout'
 
 import BannerLink from '@/components/banner'
-import { convertStringToSlug } from '@/utils/change-name-format'
-import { useEffect } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-
-  useEffect(() => {
-    console.log(convertStringToSlug("Transformação Digital"))
-  }, [])
-
   return (
     <>
       <Head>
@@ -23,23 +16,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       
-      <Layout className={`w-full h-screen flex flex-col items-center justify-center gap-2 bg-blue-100 ${inter.className}`}>
+      <Layout className={`w-full min-h-screen h-auto flex flex-col items-center gap-2 bg-blue-100 ${inter.className}`}>
         <h5
           className={"text-black text-2xl h-10 my-2.5 text-center"}
         >
           Relatório Agentes Locais de Inovação
         </h5>
 
-        <div className={"w-full h-full flex items-center justify-center flex-wrap flex-col sm:flex-nowrap sm:flex-row gap-2.5 bg-blue-100 relative"}>
+        <div className={"h-auto w-full pb-5 sm:p-0 sm:h-full flex items-center sm:justify-center flex-wrap flex-col sm:flex-nowrap sm:flex-row gap-2.5 relative"}>
           <BannerLink
-            href="#"
+            href="https://sites.google.com/sebraealimg.com/ali-transformacao-digital/p%C3%A1gina-inicial"
             src={"/image/ali-td.png"}
-            classNameLink={"w-6/12 h-96"}
+            classNameLink={"w-11/12 sm:w-6/12 h-96"}
           />
           <BannerLink
             href="https://sites.google.com/view/alibrasilmaismg/p%C3%A1gina-inicial"
             src={"/image/ali-prod.jpg"}
-            classNameLink={"w-6/12 h-96"}
+            classNameLink={"w-11/12 sm:w-6/12 h-96"}
             classNameImg={"object-left"}
           />
         </div>

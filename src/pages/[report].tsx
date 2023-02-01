@@ -12,7 +12,7 @@ export default function Report() {
     const rp: IframeProps | undefined = PBI.find(({ name }) => convertStringToSlug(name) === report);
 
     return (
-        <Layout className="w-full h-auto">
+        <Layout className="w-full min-h-screen h-auto flex flex-col items-center bg-blue-100">
           {rp?.iframe}
         </Layout>
     )

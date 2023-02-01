@@ -45,7 +45,7 @@ export default function NavBar() {
         <header className={"w-full h-14 bg-[#1155cc] px-10 flex justify-between items-center"}>
             <Link
                 href="/"
-                className={`${router.pathname === "/" && "hidden"} h-max w-max px-1.5 rounded-full bg-zinc-700 brightness-90 hover:brightness-1 duration-500 ease-out`}
+                className={`${router.pathname === "/" && "hidden"} h-max w-max px-1.5 rounded-full bg-white brightness-90 hover:brightness-1 duration-500 ease-out`}
             >
                 <ArrowBendUpLeft size={25} color="rgb(212 212 216)" weight="fill" />
             </Link>
@@ -55,7 +55,7 @@ export default function NavBar() {
                 height={50}
                 width={50}
                 alt="logotipo"
-                className="object-contain sm:flex"
+                className="object-contain flex sm:hidden"
             />
 
             <nav className={"w-auto h-auto flex justify-between items-center my-auto sm:self-end"}>
