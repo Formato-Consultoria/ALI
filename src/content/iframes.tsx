@@ -1,5 +1,4 @@
 import { IframeProps } from "@/@Types/iframes";
-import { useMediaQuery } from "react-responsive";
 
 /** Exemplo:
  * {
@@ -13,12 +12,8 @@ import { useMediaQuery } from "react-responsive";
  *  coloque as variaveis width e height detro das chaves do width e height do iframe:
  */
 
-const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 640px)'
-})
-
-const height = `${isDesktopOrLaptop ? "530px" : "530px"} `;
-const width = `${isDesktopOrLaptop ?  "250px" : "1000px"}`;
+const height = "530px";
+const width = "1000px";
 
 export const PBI: IframeProps[] = [
     {
