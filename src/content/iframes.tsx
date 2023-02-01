@@ -13,7 +13,7 @@ import { IframeProps } from "@/@Types/iframes";
  * 2º coloque a variavel 'style' dentro das chaves do className do iframe
  */
 
-const style = "pt-2.5 h-[550px] sm:w-full";
+const style = "pt-2.5 h-[550px] w-full";
 
 export const PBI: IframeProps[] = [
     {

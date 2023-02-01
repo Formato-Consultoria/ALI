@@ -24,14 +24,13 @@ export default function Home() {
         <div className={"h-auto w-full py-5 sm:h-full flex items-center sm:justify-center flex-wrap flex-col gap-2.5 relative"}>
           <BannerLink
             content={anchorCustommer[0]}
-            src={"/image/ali-td.png"}
+            src={"/image/3.png"}
             classNameLink={"w-11/12 h-96"}
           />
           <BannerLink
             content={anchorCustommer[1]}
-            src={"/image/ali-prod.jpg"}
+            src={"/image/4.png"}
             classNameLink={"w-11/12 h-96"}
-            classNameImg={"object-left"}
           />
         </div>
       </Layout>

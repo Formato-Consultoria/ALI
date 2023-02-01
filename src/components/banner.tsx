@@ -13,7 +13,7 @@ export default function BannerLink({ src, content, classNameLink, classNameImg}:
     return (
         <Link
             href={convertStringToSlug(content)}
-            className={`${classNameLink} ring-1 ring-zinc-700 relative rounded`}
+            className={`${classNameLink} group ring-1 ring-white relative rounded`}
         >
             <Image
                 src={src}
@@ -22,8 +22,8 @@ export default function BannerLink({ src, content, classNameLink, classNameImg}:
                 className={`${classNameImg} object-cover w-full h-full rounded duration-500 ease-out`}
             />
 
-            <div className="hidden hover:flex items-center justify-center duration-500 ease-out absolute z-50 top-0 w-full h-full bg-black opacity-60">
-                {content}
+            <div className="hidden group-hover:flex items-center justify-center rounded duration-500 ease-out absolute z-50 top-0 w-full h-full bg-black opacity-60">
+                <p className={"text-2xl text-white"}>{content}</p>
             </div>
         </Link>
     )
