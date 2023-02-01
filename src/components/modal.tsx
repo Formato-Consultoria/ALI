@@ -1,6 +1,6 @@
 import { IframeProps } from "@/@Types/iframes";
 import { PBI } from "@/content/iframes";
-import { convertStringToSlug } from "@/utils/change-name-format";
+import { convertStringToSlug } from "@/utils/convert-string-to-slug";
 import { Dialog } from "@headlessui/react";
 import Link from "next/link";
 import { ReactElement, useEffect, useState } from "react";

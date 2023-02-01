@@ -3,10 +3,14 @@ import { Inter } from '@next/font/google'
 import Layout from '@/components/layout'
 
 import BannerLink from '@/components/banner'
+import { PBI } from '@/content/iframes';
+import { IframeProps } from '@/@Types/iframes';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const anchorCustommer = PBI.map(({ name }: IframeProps) => name);
+
   return (
     <>
       <Head>
@@ -16,23 +20,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       
-      <Layout className={`w-full min-h-screen h-auto flex flex-col items-center gap-2 bg-blue-100 ${inter.className}`}>
-        <h5
-          className={"text-black text-2xl h-10 my-2.5 text-center"}
-        >
-          Relatório Agentes Locais de Inovação
-        </h5>
-
-        <div className={"h-auto w-full pb-5 sm:p-0 sm:h-full flex items-center sm:justify-center flex-wrap flex-col sm:flex-nowrap sm:flex-row gap-2.5 relative"}>
+      <Layout className={`w-full min-h-screen h-auto flex flex-col items-center bg-blue-100 ${inter.className}`}>
+        <div className={"h-auto w-full py-5 sm:h-full flex items-center sm:justify-center flex-wrap flex-col gap-2.5 relative"}>
           <BannerLink
-            href="https://sites.google.com/sebraealimg.com/ali-transformacao-digital/p%C3%A1gina-inicial"
+            content={anchorCustommer[0]}
             src={"/image/ali-td.png"}
-            classNameLink={"w-11/12 sm:w-6/12 h-96"}
+            classNameLink={"w-11/12 h-96"}
           />
           <BannerLink
-            href="https://sites.google.com/view/alibrasilmaismg/p%C3%A1gina-inicial"
+            content={anchorCustommer[1]}
             src={"/image/ali-prod.jpg"}
-            classNameLink={"w-11/12 sm:w-6/12 h-96"}
+            classNameLink={"w-11/12 h-96"}
             classNameImg={"object-left"}
           />
         </div>

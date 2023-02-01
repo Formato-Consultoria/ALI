@@ -3,7 +3,7 @@ import Layout from '@/components/layout'
 import { PBI } from '@/content/iframes'
 import { useRouter } from 'next/router'
 
-import { convertStringToSlug } from '@/utils/change-name-format'
+import { convertStringToSlug } from '@/utils/convert-string-to-slug'
 
 export default function Report() {
     const router = useRouter();
