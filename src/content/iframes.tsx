@@ -18,7 +18,7 @@ const style = "pt-2.5 h-[550px] w-full";
 export const PBI: IframeProps[] = [
     {
         name: "ALI Produtividade",
-        iframe: <iframe className={style} title="ALI PD" src="https://app.powerbi.com/view?r=eyJrIjoiOTQ0Y2Y3NTAtNGYzNy00OWVhLWFmNzAtYWQzYjJlYmZkMWUxIiwidCI6ImJiNGYwY2FkLWVhOTMtNGY3NS1iZWQ0LTdiNGU3YmJhMmM1NSJ9"></iframe>
+        iframe: <iframe className={style} title="ALI PD" src="https://app.powerbi.com/view?r=eyJrIjoiMjU5OTJiOGMtM2I0Mi00YjY0LWIxMzQtODRiYWY2ODlkYzhmIiwidCI6Ijc3OGEzZTc2LTQ0ZDItNGViYS1iNGI3LTE0NmUyOGQ3MTNmOCJ9"></iframe>
     },
     {
         name: "ALI Transformação digital",
