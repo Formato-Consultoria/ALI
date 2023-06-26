@@ -10,7 +10,10 @@ export default function Layout({ children, className }: Props) {
     return (
         <div className={className}>
             <NavBar />
-            <div className={"w-full h-full flex flex-col items-center justify-center relative scroll-auto"}>
+            <div
+                style={{ width: '100%', height: 'calc(100vh - 56px)' }}
+                className={"flex flex-col items-center justify-center relative scroll-auto"}
+            >
                 {children}
             </div>
         </div>
